@@ -14,7 +14,15 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nx-monorepo/atom": ["lib/share/componentvite/atom/src/index.ts"],
+      "@nx-monorepo/component": ["lib/share/component/src/index.ts"],
+      "@nx-monorepo/component/server": ["lib/share/component/src/server.ts"],
+      "@nx-monorepo/molecules": [
+        "lib/share/componentvite/molecules/src/index.ts"
+      ],
+      "@nx-monorepo/organism": ["lib/share/componentvite/organism/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
