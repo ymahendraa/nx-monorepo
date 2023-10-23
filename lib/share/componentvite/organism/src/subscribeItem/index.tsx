@@ -22,9 +22,14 @@ export const SubscibeItem: React.FC<SubscribeItemProps> = ({
       {data.map((item: any, index: number) => (
         <div key={index}>
           <Card
+            styleIcon={`${item?.containerIconStyle}`}
             styleFooter={`${styleFooter}${index === 1 ? ' bg-gray-200 ' : ''}`}
             styleHead={`${styleHead}`}
-            propsHead={{ title: item.title, subtitle: item.subtitle }}
+            propsIcon={{
+              iconUrl: item.urlIcon,
+              className: item.iconStlye,
+            }}
+            propsHead={{ title: item.title.toUpperCase(), subtitle: item.subtitle }}
             propsFooter={{
               price: item.price,
               priceStyle: 'text-[40px] font-semibold',

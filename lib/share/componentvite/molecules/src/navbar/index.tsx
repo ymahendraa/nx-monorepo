@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '@nx-monorepo/atom';
 
 export interface NavbarProps {
-  title?: string;
+  title?: string | React.ReactNode;
   titleStyle?: string;
   className?: string;
 }

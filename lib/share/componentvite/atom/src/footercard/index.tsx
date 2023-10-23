@@ -20,8 +20,9 @@ export const FooterCard: React.FC<FooterCardProps> = ({
       className={`${className} gap-5 flex flex-col justify-center items-center`}
     >
       <div className="flex justify-center items-center">
-        <h1 className={`${priceStyle}`}>{price}</h1>
-        <span className={`${textStyle}`}>per bulan</span>
+        <span className={`${textStyle} -mr-3 mb-3`}>$</span>
+        <h1 className={`${priceStyle}`}>{price?.replace('$', '')}</h1>
+        <span className={`${textStyle}`}>per <br /> month</span>
       </div>
       {children}
     </div>
